@@ -1,6 +1,6 @@
 import Footer from"./Footer"
 import Header from"./Header"
-import ItemListContainer from"./ItemListContainerr"
+import ItemListContainer from"./ItemListContainer"
 import Main from"./Main"
 
 const App = ()=>{
@@ -8,6 +8,7 @@ const App = ()=>{
     <>
       <Header />
       <Main />
+      {/*<ItemListContainer greeting = "Hola, que tal?"*/>}
       <Footer />
     </>
   )
