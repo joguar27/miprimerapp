@@ -1,5 +1,5 @@
 import Nav from "./Nav"
-const Header = => {
+const Header =()=> {
     const isHeader = true
     return(
         <header className="header">
