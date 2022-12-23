@@ -1,4 +1,27 @@
-import logo from './logo.svg';
+import Footer from"./Footer"
+import Header from"./Header"
+import ItemListContainer from"./ItemListContainerr"
+import Main from"./Main"
+
+const App = ()=>{
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  )
+}
+export default App
+
+
+
+
+
+
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -25,5 +48,5 @@ function App() {
 
 
 
-export default App;
+export default App;*/
 
