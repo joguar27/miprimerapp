@@ -1,12 +1,13 @@
 const Nav = (props) => {
 
+    
+
     //const { isHeader : isHeader } = props
     const { isHeader, textLinkFooter, hrefLinkFooter } = props
 
-    //console.log(props.isHeader)
-    /* const isHeader = props.isHeader || false
-    const textLinkFooter = props.textLinkFooter || ""
-    const hrefLinkFooter = props.hrefLinkFooter || "" */
+    // const isHeader = props.isHeader || false
+    // const textLinkFooter = props.textLinkFooter || ""
+    // const hrefLinkFooter = props.hrefLinkFooter || ""
 
     if (isHeader) {
         return (
@@ -20,10 +21,16 @@ const Nav = (props) => {
     } else {
         return (
             <nav className="header__navbar">
-                <a href={hrefLinkFooter}>{textLinkFooter}</a>
+                <a href={props.hrefLinkFooter}>{props.textLinkFooter}</a>
             </nav>
         )
     }
 }
 
 export default Nav
+
+
+
+
+//(props) /linea 1
+//<span className="material-icons">shopping_cart</span> /linea 17
