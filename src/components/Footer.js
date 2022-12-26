@@ -9,8 +9,18 @@ const Footer=()=>{
             />
             <Nav
             textLinkFooter="twitter"
-            hrefLinkFooter="https://www.twitter.com/"
+            hrefLinkFooter="https://www.twitter.com/" target="blank" 
             />
+
+        {/* <li>
+        <a href="https://www.twitter.com/" target="blank"
+            ><i class="fa-brands fa-twitter"></i>
+        </a>
+        </li> */}
+
+
+
+
         </footer>
     )
 }
