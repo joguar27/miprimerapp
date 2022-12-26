@@ -7,6 +7,10 @@ const Footer=()=>{
                 textLinkFooter="facebook" 
                 hrefLinkFooter="https://www.facebook.com/"
             />
+            <Nav
+            textLinkFooter="twitter"
+            hrefLinkFooter="https://www.twitter.com/"
+            />
         </footer>
     )
 }
