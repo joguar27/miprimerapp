@@ -12,9 +12,9 @@ const Nav = (props) => {
     if (isHeader) {
         return (
             <nav className="header__navbar">
-                <a className="header__link" href="#">link</a>
-                <a className="header__link" href="#">link</a>
-                <a className="header__link" href="#">link</a>
+                <a className="header__link" href="#">INICIO</a>
+                <a className="header__link" href="#">PRODUCTOS</a>
+                <a className="header__link" href="#">CONTACTO</a>
                 <span className="material-icons">shopping_cart</span>
             </nav>
         )

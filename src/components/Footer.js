@@ -2,12 +2,10 @@ import Nav from "./Nav"
 const Footer=()=>{
     return (
         <footer>
-            <p>Copyright &copy; 2022</p>
+            <p>&copy; 2022 | JOGUAR PET SHOP | Todos los derechos reservados</p>
             <Nav 
-                //{
-                textLinkFooter="Twitter" 
+                textLinkFooter="facebook" 
                 hrefLinkFooter="https://www.facebook.com/"
-                //}
             />
         </footer>
     )

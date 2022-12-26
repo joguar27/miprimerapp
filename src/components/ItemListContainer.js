@@ -51,7 +51,7 @@ const handleClick = () => {
         <div>
             {props.greeting}
             <p>Contador : {contador}</p>
-            <button onClick={handleClick} >sumar</button>
+            <button onClick={handleClick}>sumar</button>
         </div>
     )
 }
@@ -65,4 +65,7 @@ export default ItemListContainer
 // button.addEventListener("click", () => { | ponerle el click al boton
 //     contador++ | cuando haga click se sume
 //    p.innerText = contador | y se le agrege el texto 
-// })
+//})
+
+
+

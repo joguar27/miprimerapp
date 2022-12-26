@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <h1 className="header__title">Titulo</h1>
+            <h1 className="header__title">JOGUAR</h1>
             
             <Nav isHeader={isHeader}/>
         </header>

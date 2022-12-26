@@ -36,11 +36,19 @@ main {
     padding: 0.5rem;
 }
 
+main h2{
+    text-align: center;
+}
+ 
+
+
 footer {
     background-color: #7159c1;
     color: #fff;
     padding: 1rem 0.5rem;
     font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 
