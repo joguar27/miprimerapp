@@ -68,4 +68,15 @@ export default ItemListContainer
 //})
 
 
+// const [carrito, setCarrito] = useState(0)
+// const handleClick = () => {
+//     setCarrito(carrito + 1)
+// }
 
+// return (
+//     <div>
+//         {props.greeting}
+//         <p>Carrito : {carrito}</p>
+//         <button onClick={handleClick}>sumar</button>
+//     </div>
+// )

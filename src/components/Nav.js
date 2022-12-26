@@ -15,7 +15,10 @@ const Nav = (props) => {
                 <a className="header__link" href="#">INICIO</a>
                 <a className="header__link" href="#">PRODUCTOS</a>
                 <a className="header__link" href="#">CONTACTO</a>
-                <span href="#" className="material-icons">shopping_cart</span>
+                <a href="#">
+                <span className="material-icons">shopping_cart</span>
+                </a>
+                <a className="contador__carrito" href="#">0</a>
             </nav>
         )
     } else {

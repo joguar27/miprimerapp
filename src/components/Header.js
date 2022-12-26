@@ -6,8 +6,9 @@ const Header = () => {
 
     return (
         <header className="header">
+            <a href="#">
             <h1 className="header__title">JOGUAR</h1>
-            
+            </a>
             <Nav isHeader={isHeader}/>
         </header>
     )
