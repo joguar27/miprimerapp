@@ -27,7 +27,7 @@ html , body , #root  {
     &__link {
         text-decoration: none;
         color: white;
-        margin-left: 1rem;
+        margin-left: .5rem;
     }
 }
 
@@ -38,27 +38,32 @@ header a {
 
 nav a {
     text-decoration: none;
+    margin-right: 1rem;
 }
 
 main {
     flex-grow: 1;
     padding: 0.5rem;
     background-color: #c8bfe7;
+    
 }
 
 main h2{
     text-align: center;
+    
 }
  
 main div {
     background-color: #b1a6d6;
     text-align: center;
     padding-top: 1rem;
+    
 }
 
 main p {
     padding-top: .5rem;
-    
+    font-weight: bold;
+    font-size: 17px;
 }
 
 
@@ -70,8 +75,8 @@ footer {
     font-size: 0.75rem;
     display: flex;
     justify-content: space-between;
+    
 }
-
 
 
 .header__navbar a{
