@@ -67,12 +67,12 @@ export default ItemListContainer
 //    p.innerText = contador | y se le agrege el texto 
 //})
 
+
+// asi se haria con react :
 // const ItemListContainer = (props) => {
 // const [carrito, setCarrito] = useState(0)
 // const handleClick = () => {
 //     setCarrito(carrito + 1)
-
-
 // }
 
 // return (
