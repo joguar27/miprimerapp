@@ -3,41 +3,96 @@ import { useEffect, useState } from "react";
 const ItemListContainer = (props) => {
    const [cargo, setCargo] = useState(false);
    const [productos, setProductos] = useState([]);
+   const [productosFiltrados, setProductosFiltrados] = useState([productos])
 
    useEffect(() => {
         setTimeout(() => {
             
             const ejemploProductos = [
-                {id: 1, nombre: "Producto 1", precio: 100},
-                {id: 2, nombre: "Producto 2", precio: 200},
-                {id: 3, nombre: "Producto 3", precio: 300}
+                {id: 1, nombre: "Televisor", precio: 100, categoria: "electronico"},
+                {id: 2, nombre: "Pantalon", precio: 200, categoria: "ropa"},
+                {id: 3, nombre: "Mouse", precio: 300, categoria: "electronico"}
             ]
 
-            //const copiaProductos = [...productos]
-            //const copiaProductos = productos.slice()
-
-            // ejemploProductos.forEach((producto) => {
-            //     //productos.push(producto)
-            //     copia.push(producto)
-            // })
-
-            setCargo(true);
+            setCargo(true)
             setProductos(ejemploProductos)
-            //setProductos(copiaProductos)
+            setProductosFiltrados(ejemploProductos)
 
         }, 2000)
     }, [])
    
+    //const pf = [...productos]
+
+//   const handleChandgeName = (e) => {
+//         console.log(e.target.value)
+//         const copia = productos.filter(producto=>{
+
+//             return producto.nombre.toLowerCase().includes(e.target.value.toLowerCase())
+//         })
+//         setProductosFiltrados(copia)
+//     }
+
+//     const handleChangePrice = (e) => {
+//         console.log(e.target.value)
+//         const copia = productos.filter(productos=>{
+//             return productos.precio > Number(e.target.value)
+//         })
+//         setProductosFiltrados(copia)
+//     }
+
+//     const handleChangeCategory = (e) => {
+//         console.log(e.target.value)
+//         const copia = productos.filter(producto=>{
+
+//         })
+//         setProductosFiltrados(copia)
+//     }
+
+    const handleFilter = (e) => {
+        console.log(e.target.dataset.filter)
+        const copia = productos.filter(producto=>{
+            if(e.target.dataset.filter === "nombre" ){
+                return producto.nombre.toLowerCase().includes(e.target.value.toLowerCase())
+            }
+            if(e.target.dataset.filter === "precio" ){
+                return producto.precio > Number(e.target.value)
+            }
+            else{
+                return producto.categoria === e.target.value
+            }
+        })
+        setProductosFiltrados(copia)     
+    }
+
+
 
   return (
-    <div>
-        {!cargo ? ("Cargando...") : ("Bienvenido a Joguar Pet Shop")}
-    </div>
+    <section>
+        {!cargo ? "Cargando..." : "Bienvenido a Joguar Pet Shop"}
+        <nav>
+            <input data-filter="nombre" onChange={handleFilter} type="text"placeholder="Nombre del producto" />
+            <input data-filter="precio" onChange={handleFilter} type="number"placeholder="Mayor a" />
+            <select data-filter="categoria" onChange={handleFilter}>
+                <option value="todos">Todos</option>
+                <option value="electronico">Electronico</option>
+                <option value="ropa">Ropa</option>
+            </select>
+        </nav>
+        {productosFiltrados.map(producto=>(
+            <article>
+                <h2>{producto.nombre}</h2>
+                <p>$ {producto.precio}</p>
+                <p>{producto.categoria}</p>
+            </article>
+            ))}
+    </section>
     );
 }
 
 export default ItemListContainer;
 
+
+//contador de carrito
 //asi se haria con js :
 // let contador = 0 | panel de contador con un numero
 // const p = document.querySelector("p") | llamar al p
