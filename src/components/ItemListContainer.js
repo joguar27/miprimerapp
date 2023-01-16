@@ -1,26 +1,77 @@
 import { useEffect, useState } from "react";
 
+
+
 const ItemListContainer = (props) => {
-   const [cargo, setCargo] = useState(false);
-   const [productos, setProductos] = useState([]);
-   const [productosFiltrados, setProductosFiltrados] = useState([productos])
+    const [load, setLoad] = useState(false);
+    const [productos, setProductos] = useState([]);
+    useEffect(() => {
+    const pedido = fetch("https://fakestoreapi.com/products")
+    pedido
+    .then((respuesta) => {
+        const productos = (respuesta.json())        
+        //console.log(productos)
+        return productos
+    })
+    .then((productos) => {
+        //console.log(productos)
+        setProductos(productos)
+        setLoad(true)
+    })
 
-   useEffect(() => {
-        setTimeout(() => {
-            
-            const ejemploProductos = [
-                {id: 1, nombre: "Televisor", precio: 100, categoria: "electronico"},
-                {id: 2, nombre: "Pantalon", precio: 200, categoria: "ropa"},
-                {id: 3, nombre: "Mouse", precio: 300, categoria: "electronico"}
-            ]
-
-            setCargo(true)
-            setProductos(ejemploProductos)
-            setProductosFiltrados(ejemploProductos)
-
-        }, 2000)
+    .catch((error) => {
+        console.log(error)
+        })
     }, [])
+    return (
+        <div>
+            {load ? "Bienvenido a Joguar Pet Shop" : "Cargando..."}
+            {productos.map((producto) => {
+                //console.log(producto)
+                return (
+                    <article>
+                        <h2>{producto.title}</h2>
+                    </article>
+                )
+
+            })}
+        </div>
+    )
+
+
+
+
+
+
+
+
+
+
+//    const [cargo, setCargo] = useState(false);
+//    const [productos, setProductos] = useState([]);
+//    const [productosFiltrados, setProductosFiltrados] = useState([productos])
+
+//    useEffect(() => {
+//         setTimeout(() => {
+            
+//             const ejemploProductos = [
+//                 {id: 1, nombre: "Televisor", precio: 100, categoria: "electronico"},
+//                 {id: 2, nombre: "Pantalon", precio: 200, categoria: "ropa"},
+//                 {id: 3, nombre: "Mouse", precio: 300, categoria: "electronico"}
+//             ]
+
+//             setCargo(true)
+//             setProductos(ejemploProductos)
+//             setProductosFiltrados(ejemploProductos)
+
+//         }, 2000)
+//     }, [])
    
+
+
+
+
+
     //const pf = [...productos]
 
 //   const handleChandgeName = (e) => {
@@ -48,45 +99,45 @@ const ItemListContainer = (props) => {
 //         setProductosFiltrados(copia)
 //     }
 
-    const handleFilter = (e) => {
-        console.log(e.target.dataset.filter)
-        const copia = productos.filter(producto=>{
-            if(e.target.dataset.filter === "nombre" ){
-                return producto.nombre.toLowerCase().includes(e.target.value.toLowerCase())
-            }
-            if(e.target.dataset.filter === "precio" ){
-                return producto.precio > Number(e.target.value)
-            }
-            else{
-                return producto.categoria === e.target.value
-            }
-        })
-        setProductosFiltrados(copia)     
-    }
+//     const handleFilter = (e) => {
+//         console.log(e.target.dataset.filter)
+//         const copia = productos.filter(producto=>{
+//             if(e.target.dataset.filter === "nombre" ){
+//                 return producto.nombre.toLowerCase().includes(e.target.value.toLowerCase())
+//             }
+//             if(e.target.dataset.filter === "precio" ){
+//                 return producto.precio > Number(e.target.value)
+//             }
+//             else{
+//                 return producto.categoria === e.target.value
+//             }
+//         })
+//         setProductosFiltrados(copia)     
+//     }
 
 
 
-  return (
-    <section>
-        {!cargo ? "Cargando..." : "Bienvenido a Joguar Pet Shop"}
-        <nav>
-            <input data-filter="nombre" onChange={handleFilter} type="text"placeholder="Nombre del producto" />
-            <input data-filter="precio" onChange={handleFilter} type="number"placeholder="Mayor a" />
-            <select data-filter="categoria" onChange={handleFilter}>
-                <option value="todos">Todos</option>
-                <option value="electronico">Electronico</option>
-                <option value="ropa">Ropa</option>
-            </select>
-        </nav>
-        {productosFiltrados.map(producto=>(
-            <article>
-                <h2>{producto.nombre}</h2>
-                <p>$ {producto.precio}</p>
-                <p>{producto.categoria}</p>
-            </article>
-            ))}
-    </section>
-    );
+//   return (
+//     <section>
+//         {!cargo ? "Cargando..." : "Bienvenido a Joguar Pet Shop"}
+//         <nav>
+//             <input data-filter="nombre" onChange={handleFilter} type="text"placeholder="Nombre del producto" />
+//             <input data-filter="precio" onChange={handleFilter} type="number"placeholder="Mayor a" />
+//             <select data-filter="categoria" onChange={handleFilter}>
+//                 <option value="todos">Todos</option>
+//                 <option value="electronico">Electronico</option>
+//                 <option value="ropa">Ropa</option>
+//             </select>
+//         </nav>
+//         {productosFiltrados.map(producto=>(
+//             <article>
+//                 <h2>{producto.nombre}</h2>
+//                 <p>$ {producto.precio}</p>
+//                 <p>{producto.categoria}</p>
+//             </article>
+//             ))}
+//     </section>
+//     );
 }
 
 export default ItemListContainer;
