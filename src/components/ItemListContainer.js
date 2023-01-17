@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import ItemList from "./ItemList";
 
 
 const ItemListContainer = (props) => {
@@ -18,7 +18,6 @@ const ItemListContainer = (props) => {
         setProductos(productos)
         setLoad(true)
     })
-
     .catch((error) => {
         console.log(error)
         })
@@ -26,25 +25,17 @@ const ItemListContainer = (props) => {
     return (
         <div>
             {load ? "Bienvenido a Joguar Pet Shop" : "Cargando..."}
-            {productos.map((producto) => {
+            <ItemList productos={productos}/>
+            {/* {productos.map((producto) => {
                 //console.log(producto)
                 return (
-                    <article>
-                        <h2>{producto.title}</h2>
+                    <article key={producto.id}>
+                        <h4>{producto.title}</h4>
                     </article>
                 )
-
-            })}
+            })} */}
         </div>
     )
-
-
-
-
-
-
-
-
 
 
 //    const [cargo, setCargo] = useState(false);
