@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
   return (
-    <article key={producto.id}>
-      <h4>{producto.title}</h4>
-      <img
+    <article key={producto.id} className="product-card">
+      <h3 className="product-card__title">{producto.title}</h3>
+      <img className="product-card__img"
         src={`https://picsum.photos/200/300?random=${producto.id}`}
         alt={producto.title}
       />
@@ -12,7 +12,7 @@ const Item = ({ producto }) => {
         {/* <button>Ver mas...</button> */}
         {/* <a href={"/productos/" + producto.id}>Ver mas...</a> */}
         {/* <a></a> */}
-        <Link to={"/productos/" + producto.id}>Ver mas...</Link>
+        <Link to={"/item/" + producto.id}>Ver mas...</Link>
     </article>
   );
 };

@@ -7,9 +7,17 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
 
     const props = useParams()
-    console.log(props)
+    //console.log(props.categoria)
 
     useEffect(() => {
+
+        // newPromise(()=>{
+        //     setTimeout(()=>{
+        //         setLoad(true)
+        //     }, 2000)
+        //     })
+        // })
+
     const pedido = fetch("https://fakestoreapi.com/products")
     pedido
     .then((respuesta) => {
@@ -19,6 +27,7 @@ const ItemListContainer = () => {
     })
     .then((productos) => {
         //console.log(productos)
+        //productos.filter(props.categoria) si usamos archivo json
         setProductos(productos)
         setLoad(true)
     })
@@ -27,7 +36,7 @@ const ItemListContainer = () => {
         })
     }, [])
     return (
-        <div>
+        <>
             {load ? "Bienvenido a Joguar Pet Shop" : "Cargando..."}
             <ItemList productos={productos}/>
             {/* {productos.map((producto) => {
@@ -38,7 +47,7 @@ const ItemListContainer = () => {
                     </article>
                 )
             })} */}
-        </div>
+        </>
     )
 
 

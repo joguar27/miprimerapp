@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Nav = (props) => {
   //const { isHeader : isHeader } = props
   const { isHeader, textLinkFooter, hrefLinkFooter } = props;
@@ -10,21 +10,21 @@ const Nav = (props) => {
   if (isHeader) {
     return (
       <nav className="header__navbar">
-        <Link className="header__link" to="/productos/electronicos">
+        <NavLink className="header__link" to="/productos/electronicos">
           ELECTRONICOS
-        </Link>
-        <Link className="header__link" to="/productos/ropa">
+        </NavLink>
+        <NavLink className="header__link" to="/productos/ropa">
           ROPA
-        </Link>
-        <Link className="header__link" to="#">
+        </NavLink>
+        {/* <NavLink className="header__link" to="#">
           CONTACTO
-        </Link>
-        <Link to="/carrito">
+        </NavLink> */}
+        <NavLink to="/carrito">
         {/* <a href="#"> */}
           <span className="counter-cart">100</span>
           <span className="material-icons">shopping_cart</span>
         {/* </a> */}
-        </Link>
+        </NavLink>
         {/* <a className="contador__carrito" href="#">0</a> */}
       </nav>
     )

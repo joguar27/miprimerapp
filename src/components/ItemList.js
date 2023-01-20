@@ -2,7 +2,7 @@ import Item from "./Item"
 
 const ItemList = ({productos}) => {
   return (
-    <div>
+    <section className="product-container">
       {productos.map((producto) => {
         //console.log(producto)
         return (
@@ -12,7 +12,7 @@ const ItemList = ({productos}) => {
           //   </article>
         );
       })}
-    </div>
+    </section>
   );
 };
 
