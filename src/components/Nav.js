@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
+import { contexto } from "./CustomProvider";
+
 const Nav = (props) => {
   //const { isHeader : isHeader } = props
   const { isHeader, textLinkFooter, hrefLinkFooter } = props;
+
+  const { totalProductos } = useContext(contexto)
+  //console.log(valorDelContexto)
 
   // const isHeader = props.isHeader || false
   // const textLinkFooter = props.textLinkFooter || ""
@@ -16,16 +23,7 @@ const Nav = (props) => {
         <NavLink className="header__link" to="/productos/ropa">
           ROPA
         </NavLink>
-        {/* <NavLink className="header__link" to="#">
-          CONTACTO
-        </NavLink> */}
-        <NavLink to="/carrito">
-        {/* <a href="#"> */}
-          <span className="counter-cart">100</span>
-          <span className="material-icons">shopping_cart</span>
-        {/* </a> */}
-        </NavLink>
-        {/* <a className="contador__carrito" href="#">0</a> */}
+        <CartWidget />
       </nav>
     )
   } else {

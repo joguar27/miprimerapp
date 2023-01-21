@@ -2,13 +2,16 @@ import React from "react";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ titulo, imagen, desc, stock = 5 }) => {
+
+  //const { setCarrito } = useCarrito();
+
   const onAdd = (parametro) => {
     console.log(parametro);
   };
 
   return (
     <div>
-      <h3>Detalle del Producto - $ 8.000</h3>
+      <h3>Detalle del Producto 1 - $ 8.000</h3>
       {/* picsum */}
       <img src="https://picsum.photos/200/300" alt="picsum" />
       <p>

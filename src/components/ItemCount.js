@@ -38,7 +38,7 @@ const ItemCount = ({stock, onAdd}) => {
         <p>Cantidad : {contador}</p>
         <button onClick={handleRestar}>-</button>
         <br />
-        <button onClick={handleConfirmar}>Confirmar</button>
+        <button onClick={handleConfirmar}>Comprar</button>
     </div>
   )
 }

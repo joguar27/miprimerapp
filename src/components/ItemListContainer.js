@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
+
     const [load, setLoad] = useState(false);
     const [productos, setProductos] = useState([]);
 
@@ -34,7 +35,8 @@ const ItemListContainer = () => {
     .catch((error) => {
         console.log(error)
         })
-    }, [])
+    }, [props])
+    
     return (
         <>
             {load ? "Bienvenido a Joguar Pet Shop" : "Cargando..."}

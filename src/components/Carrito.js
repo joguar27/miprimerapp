@@ -1,23 +1,34 @@
-import React from 'react'
+import React from "react";
 //import { handleClick } from './utils'
+import { useState } from "react";
 
 const Carrito = () => {
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
 
+  const handleClick = (e) => {
+    console.log(nombre, email);
+  };
 
-    const handleClick = (e) => {
-        console.log(e.target)
-    }
+  const handleChangeName = (e) => {
+    setNombre(e.target.value);
+  };
 
-    const handleChange = (e) => {
-        console.log(e.target)
-    }
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
 
   return (
     <div>
-        <input type="text" onChange={handleChange}/>
-        <button onClick={handleClick}>Terminar compra</button>
+      <div>
+        <input type="text" onChange={handleChangeName} placeholder="Nombre" />
+      </div>
+      <div>
+        <input type="text" onChange={handleChangeEmail} placeholder="Email" />
+      </div>
+      <button onClick={handleClick}>Finalizar compra</button>
     </div>
-  )
-}
+  );
+};
 
-export default Carrito
+export default Carrito;

@@ -1,28 +1,24 @@
-import { BrowserRouter } from "react-router-dom"
-import Footer from "./Footer"
-import Header from "./Header"
-//import ItemListContainer from "./ItemListContainer"
+import { BrowserRouter } from "react-router-dom";
+import CustomProvider from "./CustomProvider";
+import Footer from "./Footer";
+import Header from "./Header";
 //import ItemListContainer from"./ItemListContainer"
-import Main from "./Main"
+//import ItemListContainer from"./ItemListContainer"
+import Main from "./Main";
 
-const App = ()=>{
+const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <Main />
-      {/* <ItemListContainer greeting="Hola, que tal?"/> */}
-      <Footer />
-    </BrowserRouter>
-  )
-}
-export default App
-
-
-
-
-
-
-
+    <CustomProvider>
+      <BrowserRouter>
+        <Header />
+        <Main />
+        {/* <ItemListContainer greeting="Hola, que tal?"/> */}
+        <Footer />
+      </BrowserRouter>
+    </CustomProvider>
+  );
+};
+export default App;
 
 /*import logo from './logo.svg';
 import './App.css';
@@ -52,7 +48,5 @@ function App() {
 
 
 export default App;*/
-
-
 
 //{/*<ItemListContainer greeting = "Hola, que tal?">*/} /linea 11
