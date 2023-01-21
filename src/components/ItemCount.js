@@ -5,11 +5,6 @@ const ItemCount = ({stock, onAdd}) => {
 
     const [contador, setContador] = useState(1)
 
-    //const onAdd = (contador) => {
-
-    //}
-    //foo(contador)
-
     const handleSumar = () => {
         if (contador < stock){
             //contador = contador + 1

@@ -12,13 +12,6 @@ const ItemListContainer = () => {
 
     useEffect(() => {
 
-        // newPromise(()=>{
-        //     setTimeout(()=>{
-        //         setLoad(true)
-        //     }, 2000)
-        //     })
-        // })
-
     const pedido = fetch("https://fakestoreapi.com/products")
     pedido
     .then((respuesta) => {

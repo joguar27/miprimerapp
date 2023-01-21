@@ -9,9 +9,6 @@ const Item = ({ producto }) => {
         alt={producto.title}
       />
         <p>{producto.price}</p>
-        {/* <button>Ver mas...</button> */}
-        {/* <a href={"/productos/" + producto.id}>Ver mas...</a> */}
-        {/* <a></a> */}
         <Link to={"/item/" + producto.id}>Ver mas...</Link>
     </article>
   );
@@ -22,12 +19,3 @@ export default Item;
 
 
 
-// import React from 'react'
-
-// const Item = () => {
-//   return (
-//     <div>Item</div>
-//   )
-// }
-
-// export default Item

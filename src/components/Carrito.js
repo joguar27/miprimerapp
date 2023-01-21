@@ -23,9 +23,11 @@ const Carrito = () => {
       <div>
         <input type="text" onChange={handleChangeName} placeholder="Nombre" />
       </div>
+      <br />
       <div>
         <input type="text" onChange={handleChangeEmail} placeholder="Email" />
       </div>
+      <br />
       <button onClick={handleClick}>Finalizar compra</button>
     </div>
   );

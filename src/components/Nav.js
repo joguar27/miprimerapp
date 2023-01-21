@@ -17,11 +17,11 @@ const Nav = (props) => {
   if (isHeader) {
     return (
       <nav className="header__navbar">
-        <NavLink className="header__link" to="/productos/electronicos">
-          ELECTRONICOS
+        <NavLink className="header__link" to="/productos/caninos">
+          CANINOS
         </NavLink>
-        <NavLink className="header__link" to="/productos/ropa">
-          ROPA
+        <NavLink className="header__link" to="/productos/felinos">
+          FELINOS
         </NavLink>
         <CartWidget />
       </nav>

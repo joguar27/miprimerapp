@@ -1,53 +1,39 @@
-import { createContext, useContext, useEffect, useState } from 'react'
-//import React from 'react'
+import { createContext, useContext, useEffect, useState } from "react";
+import React from 'react'
 
-export const contexto = createContext()
-const Provider = contexto.Provider
-//el contexto se lee asi:
-//import {useContext} from 'react'
-//const valorDelContexto = useContext(objetoContexto)
+export const contexto = createContext();
+const Provider = contexto.Provider;
+
 export const useCarrito = () => {
-    const valorDelContexto =  useContext(contexto)
-    return valorDelContexto
-}
+  const valorDelContexto = useContext(contexto);
+  return valorDelContexto;
+};
 
-const CustomProvider = ({children}) => {
+const CustomProvider = ({ children }) => {
+  const [carrito, setCarrito] = useState([]);
+  const [totalProductos, setTotalProductos] = useState(0);
 
-    const [carrito, setCarrito] = useState([])
-    const [totalProductos, setTotalProductos] = useState(0)
+  const agregarProducto = (producto, cantidad) => {};
 
-    const agregarProducto = (producto, cantidad) => {
-        //const copia = [ ...arr ]
-        //copia.´push(producto)
-        //setCarrito(copia)
-    }
+  const eliminarProducto = (id) => {};
 
-    const eliminarProducto = (id)=>{}
+  const vaciarCarrito = () => {
+    setCarrito([]);
+  };
 
-    const vaciarCarrito = ()=>{
-        setCarrito([])
-    }
+  const estaEnCarrito = (id) => {
+    //return true | false
+  };
 
-    const estaEnCarrito = (id) => {
-        //return true | false
-    }
+  const valorDelContexto = {
+    carrito: carrito,
+    totalProductos: totalProductos,
+    // setCarrito : setCarrito,
+    // setTotalProductos : setTotalProductos
+    agregarProducto: agregarProducto,
+  };
 
+  return <Provider value={valorDelContexto}>{children}</Provider>;
+};
 
-    const valorDelContexto = {
-        carrito : carrito,
-        totalProductos : totalProductos,
-        // setCarrito : setCarrito,
-        // setTotalProductos : setTotalProductos
-        agregarProducto : agregarProducto
-    }
-
-  return (
-        <Provider value={valorDelContexto}> 
-            {children}
-        </Provider> 
-  )
-}
-
-export default CustomProvider
-
-
+export default CustomProvider;

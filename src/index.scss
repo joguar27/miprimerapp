@@ -16,7 +16,7 @@ html , body , #root  {
 }
 
 .header {
-    background-color: #7159c1;
+    background-color: #7159c1c5;
     color: #fff;
     padding: 1rem 0.5rem;
     display: flex;
@@ -24,11 +24,11 @@ html , body , #root  {
     justify-content: space-between;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
-    &__link {
-        text-decoration: none;
-        color: white;
-        margin-left: .5rem;
-    }
+    //&__link {
+        //text-decoration: none;
+        //color: white;
+        //margin-left: .5rem;
+    //}
 
     // &__navbar {
 
@@ -47,8 +47,8 @@ header a {
 }
 
 nav a {
-    //text-decoration: none;
-    //margin-right: 1rem;
+    text-decoration: none;
+    margin-right: 1rem;
 }
 
 main {
@@ -67,9 +67,10 @@ main {
 }
 
 .product-card{
-    width: 300px;
-    background-color: #fff;
-    border: 2px solid black;
+    width: 250px;
+    //height: 500px;
+    background-color: rgb(195, 215, 221);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     padding: 1rem;
@@ -83,28 +84,8 @@ main {
 
 
 
-
-main h2{
-    //text-align: center;
-}
- 
-// main div {
-//     background-color: #b1a6d6;
-//     text-align: center;
-//     padding-top: 1rem;
-    
-// }
-
-main p {
-    //padding-top: .5rem;
-    //font-weight: bold;
-    //font-size: 17px;
-}
-
-
-
 footer {
-    background-color: #7159c1;
+    background-color: #7159c1c5;
     color: #fff;
     padding: 1rem 0.5rem;
     font-size: 0.75rem;
@@ -121,7 +102,7 @@ footer {
 
 
 .material-icons{
-    //color: rgb(221, 82, 82);
+    color: rgb(141, 73, 73);
 }
 
 
@@ -129,16 +110,8 @@ footer {
 
 
 
-/*body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}*/
+
+
+
+

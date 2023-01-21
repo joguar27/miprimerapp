@@ -3,16 +3,13 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ titulo, imagen, desc, stock = 5 }) => {
 
-  //const { setCarrito } = useCarrito();
-
   const onAdd = (parametro) => {
     console.log(parametro);
   };
 
   return (
     <div>
-      <h3>Detalle del Producto 1 - $ 8.000</h3>
-      {/* picsum */}
+      <h3>Detalle del Producto - $ 8.000</h3>
       <img src="https://picsum.photos/200/300" alt="picsum" />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id error culpa
