@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "./ItemCount";
 import { useParams } from "react-router-dom";
 
-const ItemDetail = ({ producto, stock = 5 }) => {
+const ItemDetail = ({ producto, titulo, imagen, desc, stock = 5 }) => {
   const onAdd = (parametro) => {
     console.log(parametro);
   };
@@ -28,7 +28,7 @@ const ItemDetail = ({ producto, stock = 5 }) => {
         voluptas explicabo illo accusamus esse accusantium unde asperiores et
         deleniti sint fuga tempora qui!
       </p>
-      <ItemCount />
+      <ItemCount stock={stock} onAdd={onAdd} />
       {/* <div>
         <button> + </button>
         <p> Cantidad: 1 </p>

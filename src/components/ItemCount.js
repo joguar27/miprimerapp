@@ -8,13 +8,13 @@ const ItemCount = ({stock, onAdd}) => {
     const handleSumar = () => {
         if (contador < stock){
             //contador = contador + 1
-        setContador(contador + 1)
+            setContador(contador + 1)
         }
     }
 
     const handleRestar = () => {
         //contador = contador - 1
-        setContador(contador - 1)
+            setContador(contador - 1)
     }
 
     const handleConfirmar = () => {
@@ -27,7 +27,7 @@ const ItemCount = ({stock, onAdd}) => {
 
   return (
     <div>
-        <button onClick={handleResetear}>Reset</button>
+        <button onClick={handleResetear}>Resetear</button>
         <br />
         <button onClick={handleSumar}>+</button>
         <p>Cantidad : {contador}</p>
