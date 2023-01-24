@@ -7,9 +7,9 @@ const ItemList = ({productos}) => {
         //console.log(producto)
         return (
           <Item producto={producto} key={producto.id} />
-          //   <article key={producto.id}>
-          //     <h4>{producto.title}</h4>
-          //   </article>
+             //<article key={producto.id}>
+               //<h4>{producto.title}</h4>
+             //</article>
         );
       })}
     </section>

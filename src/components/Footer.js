@@ -3,7 +3,7 @@ import Nav from "./Nav";
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; 2023 | JOGUAR PET SHOP | Todos los derechos reservados.</p>
+      <p>&copy; 2023 | JOGUAR SHOP | Todos los derechos reservados.</p>
       <Nav
         textLinkFooter="facebook"
         hrefLinkFooter="https://www.facebook.com/"

@@ -1,22 +1,24 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import { useParams } from "react-router-dom";
 
-const ItemDetail = ({ titulo, imagen, desc, stock = 5 }) => {
-
+const ItemDetail = ({ producto, stock = 5 }) => {
   const onAdd = (parametro) => {
     console.log(parametro);
   };
 
   return (
     <div>
-      <h3>Detalle del Producto - $ 8.000</h3>
-      <img src="https://picsum.photos/200/300" alt="picsum" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id error culpa
-        illo, facilis voluptas praesentium fugiat ipsum vel, dolorem neque quod.
-        Rerum quis dolorem aperiam ipsa, tempora facilis quae beatae?
-      </p>
-      <ItemCount stock={stock} onAdd={onAdd} />
+      <article key={producto.id} className="product-card">
+        <h3 className="product-card__title">{producto.title}</h3>
+        <img
+          className="product-card__img"
+          src={`https://picsum.photos/200/300?random=${producto.id}`}
+          alt={producto.title}
+        />
+        <p>{producto.price}</p>
+        {/* <Link to={"/item/" + producto.id}>Ver mas...</Link> */}
+      </article>
     </div>
   );
 };

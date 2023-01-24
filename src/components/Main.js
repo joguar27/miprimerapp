@@ -7,11 +7,11 @@ import Carrito from "./Carrito"
 const Main = () => {
     return (
         <main>
-            <h2>JOGUAR PET SHOP</h2>
+            <h2>JOGUAR SHOP</h2>
             {/* <ItemListContainer/> */}
             <Routes>
                 <Route path="/" element={<ItemListContainer/>}/>
-                <Route path="/productos/:categoria" element={<ItemListContainer/>}/>
+                <Route path="/category/:categoria" element={<ItemListContainer/>}/>
                 <Route path="/item/:id" element={<ItemDetailContainer/>}/>
                 <Route path="/carrito" element={<Carrito/>}/>
                 {/* <Route path="*" element={<NotFound/>}/> */}

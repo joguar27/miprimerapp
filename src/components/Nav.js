@@ -7,7 +7,7 @@ const Nav = (props) => {
   //const { isHeader : isHeader } = props
   const { isHeader, textLinkFooter, hrefLinkFooter } = props;
 
-  const { totalProductos } = useContext(contexto)
+  const { totalProductos } = useContext(contexto);
   //console.log(valorDelContexto)
 
   // const isHeader = props.isHeader || false
@@ -17,15 +17,21 @@ const Nav = (props) => {
   if (isHeader) {
     return (
       <nav className="header__navbar">
-        <NavLink className="header__link" to="/productos/caninos">
-          CANINOS
+        <NavLink className="header__link" to="category/electronics">
+          ELECTRONICA
         </NavLink>
-        <NavLink className="header__link" to="/productos/felinos">
-          FELINOS
+        <NavLink className="header__link" to="category/men's clothing">
+          ROPA HOMBRE
+        </NavLink>
+        <NavLink className="header__link" to="category/jewelery">
+          JOYERIA
+        </NavLink>
+        <NavLink className="header__link" to="category/women's clothing">
+          ROPA MUJER
         </NavLink>
         <CartWidget />
       </nav>
-    )
+    );
   } else {
     return (
       <nav className="header__navbar">
@@ -37,5 +43,5 @@ const Nav = (props) => {
 
 export default Nav;
 
-//(props) /linea 1
-//<span className="material-icons">shopping_cart</span> /linea 17
+
+
