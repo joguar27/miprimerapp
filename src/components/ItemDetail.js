@@ -9,8 +9,9 @@ const ItemDetail = ({ producto, stock = 5 }) => {
 
   return (
     <div>
+      <h3>Detalle del Producto | $ 8.000</h3>
       <article key={producto.id} className="product-card">
-        <h3 className="product-card__title">{producto.title}</h3>
+        <h4 className="product-card__title">{producto.title}</h4>
         <img
           className="product-card__img"
           src={`https://picsum.photos/200/300?random=${producto.id}`}
@@ -19,6 +20,12 @@ const ItemDetail = ({ producto, stock = 5 }) => {
         <p>{producto.price}</p>
         {/* <Link to={"/item/" + producto.id}>Ver mas...</Link> */}
       </article>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui corporis vitae, nihil non voluptatem consectetur, blanditiis sit quod nobis dolorum tempora illo aperiam eveniet. Accusamus odit provident dolorem cum. Quos aliquam molestiae aliquid, temporibus incidunt voluptas explicabo illo accusamus esse accusantium unde asperiores et deleniti sint fuga tempora qui!</p>
+      <button> + </button>
+      <p> Cantidad: 1 </p>
+      <button> - </button>
+      <br />
+      <button> Comprar </button>
     </div>
   );
 };
