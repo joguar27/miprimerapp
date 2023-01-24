@@ -20,12 +20,22 @@ const ItemDetail = ({ producto, stock = 5 }) => {
         <p>{producto.price}</p>
         {/* <Link to={"/item/" + producto.id}>Ver mas...</Link> */}
       </article>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui corporis vitae, nihil non voluptatem consectetur, blanditiis sit quod nobis dolorum tempora illo aperiam eveniet. Accusamus odit provident dolorem cum. Quos aliquam molestiae aliquid, temporibus incidunt voluptas explicabo illo accusamus esse accusantium unde asperiores et deleniti sint fuga tempora qui!</p>
-      <button> + </button>
-      <p> Cantidad: 1 </p>
-      <button> - </button>
-      <br />
-      <button> Comprar </button>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui
+        corporis vitae, nihil non voluptatem consectetur, blanditiis sit quod
+        nobis dolorum tempora illo aperiam eveniet. Accusamus odit provident
+        dolorem cum. Quos aliquam molestiae aliquid, temporibus incidunt
+        voluptas explicabo illo accusamus esse accusantium unde asperiores et
+        deleniti sint fuga tempora qui!
+      </p>
+      <ItemCount />
+      {/* <div>
+        <button> + </button>
+        <p> Cantidad: 1 </p>
+        <button> - </button>
+        <br />
+        <button> Comprar </button>
+      </div> */}
     </div>
   );
 };
