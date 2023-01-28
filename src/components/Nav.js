@@ -29,6 +29,10 @@ const Nav = (props) => {
         <NavLink className="header__link" to="category/women's clothing">
           ROPA MUJER
         </NavLink>
+        {/* <NavLink to="/carrito">
+          <span className="material-icons">shopping_cart</span>
+          {totalProductos}
+        </NavLink> */}
         <CartWidget />
       </nav>
     );

@@ -1,8 +1,12 @@
 import Nav from "./Nav";
 
 const Footer = () => {
+
+  // const {totalProductos} = useCarrito()
+
   return (
     <footer>
+      {/* {totalProductos} */}
       <p>&copy; 2023 | JOGUAR SHOP | Todos los derechos reservados.</p>
       <Nav
         textLinkFooter="facebook"

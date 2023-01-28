@@ -10,10 +10,15 @@ export const useCarrito = () => {
 };
 
 const CustomProvider = ({ children }) => {
+
   const [carrito, setCarrito] = useState([]);
   const [totalProductos, setTotalProductos] = useState(0);
 
-  const agregarProducto = (producto, cantidad) => {};
+  const agregarProducto = (producto, cantidad) => {
+    const copia = [...carrito]
+    copia.push(producto)
+    setCarrito(copia)
+  };
 
   const eliminarProducto = (id) => {};
 
@@ -26,14 +31,17 @@ const CustomProvider = ({ children }) => {
   };
 
   const valorDelContexto = {
-    carrito: carrito,
-    totalProductos: totalProductos,
-    // setCarrito : setCarrito,
-    // setTotalProductos : setTotalProductos
-    agregarProducto: agregarProducto,
+    carrito : carrito,
+    totalProductos : totalProductos,
+    //setCarrito : setCarrito,
+    //setTotalProductos : setTotalProductos,
+    agregarProducto : agregarProducto,
   };
 
   return <Provider value={valorDelContexto}>{children}</Provider>;
 };
 
 export default CustomProvider;
+
+
+

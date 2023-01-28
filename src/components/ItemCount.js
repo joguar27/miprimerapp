@@ -5,6 +5,8 @@ const ItemCount = ({stock, onAdd}) => {
 
     const [contador, setContador] = useState(1)
 
+    //onAdd(contador)
+
     const handleSumar = () => {
         if (contador < stock){
             //contador = contador + 1
@@ -17,23 +19,23 @@ const ItemCount = ({stock, onAdd}) => {
             setContador(contador - 1)
     }
 
-    const handleConfirmar = () => {
-        onAdd(contador)    
+    const handleComprar = () => {
+            onAdd(contador)    
     }
 
     const handleResetear = () => {
-        setContador(1)
+            setContador(1)
     }
 
   return (
     <div>
-        <button onClick={handleResetear}>Resetear</button>
+        <button onClick={handleResetear}> Resetear </button>
         <br />
-        <button onClick={handleSumar}>+</button>
+        <button onClick={handleSumar}> + </button>
         <p>Cantidad : {contador}</p>
-        <button onClick={handleRestar}>-</button>
+        <button onClick={handleRestar}> - </button>
         <br />
-        <button onClick={handleConfirmar}>Comprar</button>
+        <button onClick={handleComprar}> Comprar </button>
     </div>
   )
 }

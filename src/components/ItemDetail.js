@@ -3,8 +3,10 @@ import ItemCount from "./ItemCount";
 import { useParams } from "react-router-dom";
 
 const ItemDetail = ({ producto, titulo, imagen, desc, stock = 5 }) => {
+
   const onAdd = (parametro) => {
     console.log(parametro);
+
   };
 
   return (

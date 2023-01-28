@@ -14,6 +14,7 @@ const Main = () => {
                 <Route path="/category/:categoria" element={<ItemListContainer/>}/>
                 <Route path="/item/:id" element={<ItemDetailContainer/>}/>
                 <Route path="/carrito" element={<Carrito/>}/>
+                {/* <Route path="/checkout" element={<Carrito/>}/> */}
                 {/* <Route path="*" element={<NotFound/>}/> */}
                 {/* <Route path="/electronicos" element={<p>ELECTRONICOS</p>}/> */}
                 {/* <Route path="/ropa" element={<p>ROPA</p>}/> */}
