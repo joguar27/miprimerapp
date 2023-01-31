@@ -1,16 +1,29 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 import { useParams } from "react-router-dom";
+import { useCarrito } from "./CustomProvider";
 
 const ItemDetail = ({ producto, titulo, imagen, desc, stock = 5 }) => {
 
+  //const {setCarrito} = useCarrito()
+
   const onAdd = (parametro) => {
     console.log(parametro);
-
+    //agregarProducto()
   };
 
+  // const agregarProducto = () => {
+  //   if(stock>5){
+  //     else{
+
+  //     }
+  //   }
+  // }
+  // setCarrito()
+
+
   return (
-    <div>
+    <div className="div_itemdetail">
       <h3>Detalle del Producto | $ 8.000</h3>
       <article key={producto.id} className="product-card">
         <h4 className="product-card__title">{producto.title}</h4>
@@ -22,7 +35,7 @@ const ItemDetail = ({ producto, titulo, imagen, desc, stock = 5 }) => {
         <p>{producto.price}</p>
         {/* <Link to={"/item/" + producto.id}>Ver mas...</Link> */}
       </article>
-      <p>
+      <p className = "p-itemdetail">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui
         corporis vitae, nihil non voluptatem consectetur, blanditiis sit quod
         nobis dolorum tempora illo aperiam eveniet. Accusamus odit provident

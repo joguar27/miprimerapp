@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
+
+//console.log(db)
+
+
+
+//console.log(productosCollection);
+
+
 
 const ItemListContainer = () => {
 
@@ -19,6 +29,24 @@ const ItemListContainer = () => {
         //  })
 
     const pedido = categoria ? `https://fakestoreapi.com/products/category/${categoria}` :  "https://fakestoreapi.com/products"
+    
+
+    const productosCollection = collection(db, "productos"); //CollectionReference
+    //getDocs(Query,...)
+    const pedidoFirestore = getDocs(productosCollection);
+    console.log(pedidoFirestore)
+    
+    pedidoFirestore
+        .then((respuesta)=>{
+            console.log(respuesta)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    
+    
+    
+    
     const nuevoPedido = fetch(pedido)
     nuevoPedido
     .then((respuesta) => {
