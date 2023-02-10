@@ -4,15 +4,11 @@ import CartWidget from "./CartWidget";
 import { contexto } from "./CustomProvider";
 
 const Nav = (props) => {
-  //const { isHeader : isHeader } = props
+ 
   const { isHeader, textLinkFooter, hrefLinkFooter } = props;
 
   const { totalProductos } = useContext(contexto);
-  //console.log(valorDelContexto)
 
-  // const isHeader = props.isHeader || false
-  // const textLinkFooter = props.textLinkFooter || ""
-  // const hrefLinkFooter = props.hrefLinkFooter || ""
 
   if (isHeader) {
     return (

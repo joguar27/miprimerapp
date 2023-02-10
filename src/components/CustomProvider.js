@@ -32,7 +32,7 @@ const CustomProvider = ({ children }) => {
   };
 
   const estaEnCarrito = (id) => {
-    //return true | false
+    
   };
 
   const valorDelContexto = {

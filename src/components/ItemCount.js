@@ -7,7 +7,6 @@ const ItemCount = ({stock, onAdd}) => {
 
     const [contador, setContador] = useState(1)
 
-    //onAdd(contador)
 
     const handleSumar = () => {
         if (contador < stock){

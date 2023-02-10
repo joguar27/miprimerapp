@@ -4,14 +4,13 @@ import { db } from "../firebase";
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-  //console.log(window.location.pathname)
-  //console.log("detalle")
+
 
   const [load, setLoad] = useState(false);
   const [product, setProduct] = useState({});
 
   const { id } = useParams();
-  //console.log(id)
+  
 
   useEffect(() => {
     const prods = fetch(`https://fakestoreapi.com/products/${id}`);
